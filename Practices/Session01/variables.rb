@@ -16,7 +16,7 @@ puts "The 25% fo discount of 1500$ is: #{discount}"
 actual_year = 2018
 born_year = 1990
 year_old = actual_year - born_year
-puts "She born in 1990 and she is #{year_old} years old. #{new_year}"
+# puts "She born in 1990 and she is #{year_old} years old. #{new_year}"
 
 puts "Logic operations:"
 
@@ -56,15 +56,15 @@ puts "The total area is #{height * weight} inches."
 #     Create variable to assign the values
 # Use the variable name to print the result.
 
-HOURS = 24 # one day
-MINUTES = 60 # one hour
-SECONDS = 60 # one minute
+seconds = 432000 # five days
+minutes = 60 # one hour
+hour = 24 # one day
 
-puts "In one year exist 365 days."
-days = 365
-days_to_hours = days * HOURS
-puts "In one year exist #{days_to_hours} hours."
-hours_to_minutes = days_to_hours * MINUTES
-puts "In one year exist #{hours_to_minutes} minutes."
-minutes_to_seconds = hours_to_minutes * SECONDS
-puts "In one year exist #{minutes_to_seconds} seconds."
+seconds_to_minutes = seconds / minutes
+puts "In #{seconds} seconds are #{seconds_to_minutes} minutes."
+
+seconds_to_hours = seconds_to_minutes / minutes
+puts "In #{seconds} seconds are #{seconds_to_hours} hours."
+
+seconds_to_days = seconds_to_hours / hour
+puts "In #{seconds} seconds are #{seconds_to_days} days."
