@@ -50,3 +50,21 @@ puts "This is a practice made for #{my_name} any consult call to #{my_cell_phone
 height = 54 # inches
 weight = 82 # inches
 puts "The total area is #{height * weight} inches."
+
+# 4. Write an script with variables that convert seconds in minutes, seconds in hours and second in days.
+#     Do not just type in the measurements. Please work out the calculation in Ruby.
+#     Create variable to assign the values
+# Use the variable name to print the result.
+
+HOURS = 24 # one day
+MINUTES = 60 # one hour
+SECONDS = 60 # one minute
+
+puts "In one year exist 365 days."
+days = 365
+days_to_hours = days * HOURS
+puts "In one year exist #{days_to_hours} hours."
+hours_to_minutes = days_to_hours * MINUTES
+puts "In one year exist #{hours_to_minutes} minutes."
+minutes_to_seconds = hours_to_minutes * SECONDS
+puts "In one year exist #{minutes_to_seconds} seconds."
