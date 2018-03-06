@@ -4,7 +4,7 @@
 #   b) Pickup any way of the return displayed.
 
 def celsius_to_fahrenheit(celsius)
-  ((9 * celsius) / 5) + 32
+  (((9 * celsius) / 5) + 32).to_f
 end
 
 value = 10
@@ -21,7 +21,7 @@ puts "#{value} celsius to fahrenheit is: #{celsius_to_fahrenheit value}"
 # Tips : use the correct format of number (int? float?)
 
 def fahrenheit_to_celsius(fahrenheit)
-  (5 * (fahrenheit - 32)) / 9
+  ((5 * (fahrenheit - 32)) / 9).to_f
 end
 
 value = 50
