@@ -4,17 +4,17 @@
 #     From hours to days
 #     From days to month
 
-module Time_convertion
+module Time_conversion
   def minutes_to_hours(minutes)
-    minutes / 60
+    minutes / 60.to_f
   end
 
   def hours_to_day(hours)
-    hours / 24
+    hours / 24.to_f
   end
 
   def days_to_month(days)
-    days / 31
+    days / 31.to_f
   end
 end
 
@@ -23,16 +23,16 @@ end
 #     From centimeter to meters
 #     From meters to Kilometers
 
-module Distance_convertion
+module Distance_conversion
   def millimeters_to_centimeters(millimeters)
-    millimeters / 10
+    millimeters / 10.to_f
   end
 
   def centimeters_to_meters(centimeters)
-    centimeters / 100
+    centimeters / 100.to_f
   end
 
   def meters_to_kilometers(meters)
-    meters / 1000
+    meters / 1000.to_f
   end
 end
