@@ -7,3 +7,4 @@ Feature: Capybara session01
     Examples:
       | User Name                      | Password   |
       | cst_analyst@jalasoft.com.aut02 | Control123 |
+    
