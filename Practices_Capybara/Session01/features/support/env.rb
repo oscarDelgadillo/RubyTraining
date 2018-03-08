@@ -3,9 +3,9 @@
 # rescue LoadError;
 #   require 'spec/expectations';
 # end
-# require 'capybara'
-# require 'capybara/dsl'
-# require 'capybara/cucumber'
+require 'capybara'
+require 'capybara/dsl'
+require 'capybara/cucumber'
 require 'pathname'
 require 'yaml'
 
@@ -28,24 +28,25 @@ def load_app_config_file(filename)
   return config
 end
 
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :firefox)
+end
 
 AfterConfiguration do
   # Load global configuration parameters
   configuration = load_app_config_file('config.yml')
   # configure capybara
   config_capybara = configuration['capybara']['default']
-  $default_host = "#{config_capybara['host']} "
-  $default_wait = config_capybara['wait_time'].to_i
-  $default_user = "#{config_capybara['user']}"
-  $default_password = "#{config_capybara['password']}"
-  $drivers = config_capybara['drivers']
+  default_host = "#{config_capybara['host']} "
+  default_wait = config_capybara['wait_time'].to_i
+  default_user = "#{config_capybara['user']}"
+  default_password = "#{config_capybara['password']}"
+  drivers = config_capybara['drivers']
 
-  # Capybara.configure do |config|
-  #   Capybara.default_driver = :selenium
-  #   Capybara.run_server = false
-  #   Capybara.app_host = default_host
-  #   Capybara.default_wait_time = default_wait
-  #   Capybara.default_user = default_user
-  #   Capybara.default_password = default_password
-  # end
+  Capybara.configure do |config|
+    Capybara.default_driver = :selenium
+    Capybara.run_server = false
+    Capybara.app_host = default_host
+    Capybara.default_max_wait_time = default_wait
+  end
 end
