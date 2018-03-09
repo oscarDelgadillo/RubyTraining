@@ -29,7 +29,7 @@ def load_app_config_file(filename)
 end
 
 Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :firefox)
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
 end
 
 AfterConfiguration do
@@ -37,7 +37,7 @@ AfterConfiguration do
   configuration = load_app_config_file('config.yml')
   # configure capybara
   config_capybara = configuration['capybara']['default']
-  default_host = "#{config_capybara['host']} "
+  default_host = "#{config_capybara['host']}"
   default_wait = config_capybara['wait_time'].to_i
   default_user = "#{config_capybara['user']}"
   default_password = "#{config_capybara['password']}"
