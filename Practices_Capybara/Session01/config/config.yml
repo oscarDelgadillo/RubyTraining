@@ -1,0 +1,14 @@
+# capybara configuration
+capybara:
+  default:
+      # url
+      host: https://test.salesforce.com/
+      # how long to wait for asynchronous processing to finish
+      wait_time: 15
+      # credentials
+      user: cst_analyst@jalasoft.com.aut02
+      password: Control123
+
+drivers:
+    - chrome
+
