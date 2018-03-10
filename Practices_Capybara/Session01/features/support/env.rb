@@ -39,8 +39,8 @@ AfterConfiguration do
   config_capybara = configuration['capybara']['default']
   default_host = "#{config_capybara['host']}"
   default_wait = config_capybara['wait_time'].to_i
-  default_user = "#{config_capybara['user']}"
-  default_password = "#{config_capybara['password']}"
+  $default_user = "#{config_capybara['user']}"
+  $default_password = "#{config_capybara['password']}"
   drivers = config_capybara['drivers']
 
   Capybara.configure do |config|
